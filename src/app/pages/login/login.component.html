@@ -1,13 +1,15 @@
 <nav class="navbar navbar-transparent navbar-absolute">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2" (click)="sidebarToggle()">
+            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2" (click)="sidebarToggle()">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" i18n="@@loginPageHeader" routerLinkActive = "active" [routerLink]="['/dashboard/overview']">Manager of Ant Media Server</a>
+            </button> -->
+            <img class="navbar-brand" src="../../../assets/img/imencoLogo.png"/>
+            <a class="navbar-brand" i18n="@@loginPageHeader" routerLinkActive = "active" [routerLink]="['/dashboard/overview']">IMS VMS Manager</a>
+
         </div>
         <!--
         <div class="collapse navbar-collapse">
@@ -26,7 +28,7 @@
 </nav>
 
 <div class="wrapper wrapper-full-page">
-    <div class="full-page login-page" data-color="" data-image="../../assets/img/background/background-2.jpg">
+    <div class="full-page login-page" data-color="black" data-image="../../assets/img/background/background-6.png">
     <!--   you can change the color of the filter page using: data-color="blue | azure | green | orange | red | purple" -->
         <div class="content">
             <div class="container">
@@ -62,7 +64,7 @@
                                         </div>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <button type="submit"  i18n="@@loginFormSubmit" class="btn btn-fill btn-wd ">Let's go</button>
+                                    <button type="submit"  i18n="@@loginFormSubmit" class="btn btn-fill btn-danger  ">Let's go</button>
                                     <!--
                                     <div class="forgot">
                                         <a href="#pablo" i18n="@@loginFormForgotPassword">Forgot your password?</a>
@@ -152,7 +154,7 @@
         <footer class="footer footer-transparent">
             <div class="container">
                 <div class="copyright">
-                    &copy; {{test | date: 'yyyy'}}  <i class="fa fa-heart heart"></i> by <a href="http://antmedia.io">AntMedia</a>
+                    <!-- &copy; {{test | date: 'yyyy'}}  <i class="fa fa-heart heart"></i> by <a href="http://imenco.no">Imenco</a> -->
                 </div>
             </div>
         </footer>

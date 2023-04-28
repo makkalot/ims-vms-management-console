@@ -13,13 +13,14 @@
                 <span class="icon-bar bar3"></span>
             </button>
             <a class="navbar-brand">{{getTitle()}}</a>
+            <!-- <img height="36" src="../../../assets/img/imencoLogo.png" /> -->
         </div>
         <div class="collapse navbar-collapse">
             <div class="" *ngIf="isMobileMenu()">
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#notifications" class="dropdown-toggle btn-magnify" data-toggle="dropdown">
+                        <!-- <a href="#notifications" class="dropdown-toggle btn-magnify" data-toggle="dropdown">
                             <i class="ti-user"></i>
                             <span class="notification"></span>
                             <b class="caret"></b>
@@ -27,9 +28,16 @@
 
 
                             </p>
+                        </a> -->
+                        <a >
+                            <button (click)="logout()" class="btn btn-primary btn-simple btn-small">
+                                <i class="ti-angle-double-right"></i>
+                                Logout
+                            </button>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
+                        <!-- <ul class="dropdown-menu"> -->
+                            
+                            <!-- <li>
                                 <a routerLink="/pages/changepass" routerLinkActive="active">
                                     <i class="ti-angle-double-right"></i>
                                     <ng-container i18n="@@changePassword">Change Password</ng-container>
@@ -45,7 +53,7 @@
                                 </a>
 
                             </li>
-                            <!--
+                            
                             <li>
                                 <a >
                                     <button (click)="logout()" class="btn btn-primary btn-simple btn-small">
@@ -55,9 +63,9 @@
                                 </a>
 
                             </li>
-                        -->
+                       
                         </ul>
-                    </li>
+                    </li> -->
 
                     <!--
                     <li>
