@@ -40,4 +40,12 @@ To build the project, use this command:
   ng build
 ```
 
+To package the build files, use this command:
+
+```sh
+  npm run package
+```
+
+This will create a .zip file that can be uploaded as a release to GitHub 
+
 Info about CSS. CSS is handled by GULP, wich you can read more about here: https://gulpjs.com/
