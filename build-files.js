@@ -1,7 +1,7 @@
 const fs = require('fs');
 const archiver = require('archiver');
 
-const output = fs.createWriteStream('./build/build.zip');
+const output = fs.createWriteStream('./.build/build.zip');
 const archive = archiver('zip', { zlib: { level: 9 } });
 
 output.on('close', () => {
@@ -32,8 +32,8 @@ archive.directory('./INF/META-INF', 'META-INF');
 archive.directory('./INF/WEB-INF', 'WEB-INF');
 
 // Create the build directory if it doesn't exist
-if (!fs.existsSync('./build')) {
-  fs.mkdirSync('./build');
+if (!fs.existsSync('./.build')) {
+  fs.mkdirSync('./.build');
 }
 
 archive.finalize();
