@@ -51,7 +51,7 @@
 	<!-- 360 player is added dynamically -->
 	
 
-	<div id="networkWarning">Your connection isn't fast enough to play this stream!</div>
+	<div id="networkWarning"></div>
 	<img id="play_button" src="images/play.png" onclick="playWebRTCVideo()"
 		style="position: absolute; top: 30px; left: 30px; display: none;" />
 
@@ -675,12 +675,12 @@
 						}
 
 						console.debug(description);
-						if (description.audioBitrate + description.videoBitrate > description.targetBitrate) {
-							document.getElementById("networkWarning").style.display = "block";
-							setTimeout(function () {
-								document.getElementById("networkWarning").style.display = "none";
-							}, 3000);
-						}
+					//	if (description.audioBitrate + description.videoBitrate > description.targetBitrate) {
+					//		document.getElementById("networkWarning").style.display = "block";
+					//		setTimeout(function () {
+					//			document.getElementById("networkWarning").style.display = "none";
+					//		}, 3000);
+					//	}
 					}
 					else if (info == "ice_connection_state_changed") {
 						console.debug("ice connection state changed to " + description.state);
