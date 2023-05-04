@@ -1,6 +1,6 @@
 {
   "name": "ims-vms-management-console",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "",
   "repository": {
     "type": "git",
@@ -13,8 +13,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "package": "node build-files.js"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

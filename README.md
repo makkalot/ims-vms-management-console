@@ -9,6 +9,9 @@ You can install Angular with this command:
 ```
 npm install -g @angular/cli@10.0.5 
 ```
+
+**Angular is not needed if you are only doing changes to WebRTCAppEE**
+**Skip to "how to package the build files" if no changes to the root folder**
   
 ### Installation
 
