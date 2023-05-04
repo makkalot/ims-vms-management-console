@@ -23,13 +23,16 @@ archive.on('error', (err) => {
 
 archive.pipe(output);
 
-archive.glob('*', {
-  cwd: './dist',
-  dot: true // include hidden files
-});
+// archive.glob('**/*', {
+//   cwd: './root/dist',
+//   dot: true // include hidden files
+// });
 
-archive.directory('./INF/META-INF', 'META-INF');
-archive.directory('./INF/WEB-INF', 'WEB-INF');
+archive.directory('./root/dist', 'root');
+archive.directory('./root/INF/META-INF', 'root/META-INF');
+archive.directory('./root/INF/WEB-INF', 'root/WEB-INF');
+
+archive.directory('./WebRTCAppEE', 'WebRTCAppEE');
 
 // Create the build directory if it doesn't exist
 if (!fs.existsSync('./.build')) {
