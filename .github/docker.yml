@@ -1,0 +1,19 @@
+name: docker-ci
+
+on: workflow_dispatch
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to Jfrog Docker Registry
+        run: echo ${{ secrets.JFROG_DOCKER_PASSWORD }} | docker login imenco.jfrog.io -u ${{ secrets.JFROG_DOCKER_USERNAME }} --password-stdin
+           
+      - name: Add SHORT_SHA env property with commit short sha
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+             
+      - name: Build and push bapi docker image
+        env:
+          DOCKER_IMAGE_AMS: imenco.jfrog.io/connect-default-docker/antmediaserver:${{ env.SHORT_SHA }}
+        run: make build-push-docker
