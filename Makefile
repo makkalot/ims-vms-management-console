@@ -6,7 +6,7 @@ AMS_VERSION?=ant-media-server-enterprise-2.5.3-20230107_0851.zip
 
 .PHONY: build-docker-base 
 build-docker-base:
-	docker build -t $(DOCKER_IMAGE_AMS_BASE) --build-arg AntMediaServer=$(AMS_VERSION) -f Dockerfile.base .
+	docker buildx build -t $(DOCKER_IMAGE_AMS_BASE) --build-arg AntMediaServer=$(AMS_VERSION) -f Dockerfile.base --platform=linux/amd64 .
 
 .PHONY: build-docker-ams
 build-docker-ams:
@@ -21,7 +21,7 @@ push-docker: build-docker
 
 .PHONY: push-docker-base
 push-docker-base: build-docker-base
-	docker push $(DOCKER_IMAGE_AMS_BASE)
+	docker buildx build -t $(DOCKER_IMAGE_AMS_BASE) --build-arg AntMediaServer=$(AMS_VERSION) -f Dockerfile.base --platform=linux/amd64 --push .
 
 .PHONY: docker-build-push
 build-push-docker: build-docker push-docker
