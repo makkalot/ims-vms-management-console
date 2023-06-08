@@ -1,5 +1,5 @@
 # change the base version when install new ams version
-DOCKER_IMAGE_AMS_BASE?=imenco.jfrog.io/connect-default-docker/antmediaserver-base:2.5.3
+DOCKER_IMAGE_AMS_BASE?=imenco/antmediaserver-base:2.5.3
 DOCKER_IMAGE_AMS?=antmediaserver:latest
 
 AMS_VERSION?=ant-media-server-enterprise-2.5.3-20230107_0851.zip

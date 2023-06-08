@@ -1,7 +1,7 @@
 # This docker file can be used in kubernetes. 
 # It accepts all cluster related parameters at run time. 
 # It means it's very easy to add new containers to the cluster 
-FROM imenco.jfrog.io/connect-default-docker/antmediaserver-base:2.5.3
+FROM imenco/antmediaserver-base:2.5.3
 
 WORKDIR /tmp
 COPY . vms-management-console/
