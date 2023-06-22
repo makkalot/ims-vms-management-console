@@ -10,14 +10,14 @@ build-docker-base:
 
 .PHONY: build-docker-ams
 build-docker-ams:
-	docker build -t $(DOCKER_IMAGE_AMS) .
+	docker buildx build -t $(DOCKER_IMAGE_AMS) --platform=linux/amd64 .
 
 .PHONY: build-docker
 build-docker: build-docker-ams
 
 .PHONY: push-docker
 push-docker: build-docker
-	docker push $(DOCKER_IMAGE_AMS)
+	docker buildx build -t $(DOCKER_IMAGE_AMS) --platform=linux/amd64 --push .
 
 .PHONY: push-docker-base
 push-docker-base: build-docker-base
